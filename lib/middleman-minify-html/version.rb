@@ -1,5 +1,5 @@
 module Middleman
   module MinifyHtml
-    VERSION = "0.1.0.pre"
+    VERSION = "3.0.0.beta.2"
   end
 end
