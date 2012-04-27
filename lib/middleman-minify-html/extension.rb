@@ -36,7 +36,7 @@ module Middleman
         path = env["PATH_INFO"]
 
         if path.end_with?('.html')
-          uncompressed_source = extract_response_text(response)
+          uncompressed_source = ::Middleman.Util.extract_response_text(response)
           minified_html = @compressor.compress(uncompressed_source)
 
           headers["Content-Length"] = ::Rack::Utils.bytesize(minified_html).to_s
@@ -45,24 +45,6 @@ module Middleman
 
         [status, headers, response]
       end
-
-      private
-
-      def extract_response_text(response)
-        case(response)
-        when String
-          response
-        when Array
-          response.join
-        when Rack::Response
-          response.body.join
-        when Rack::File
-          File.read(response.path)
-        else
-          response.to_s
-        end
-      end
-    end
-    
+    end    
   end
 end
