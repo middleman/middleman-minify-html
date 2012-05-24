@@ -1,50 +1,20 @@
 module Middleman
   module MinifyHtml
     class << self
-      def registered(app)
+      def registered(app, options={})
         app.set :html_compressor, false
         
         app.after_configuration do
           unless respond_to?(:html_compressor) && html_compressor
-            require 'html_compressor'
-            set :html_compressor, ::HtmlCompressor::HtmlCompressor.new
+            require 'htmlcompressor'
+            set :html_compressor, ::HtmlCompressor::Compressor.new(options)
           end
           
           # Setup Rack to watch for inline JS
-          use MinifyHtmlRack, :compressor => html_compressor
+          use ::HtmlCompressor::Rack, options
         end
       end
       alias :included :registered
     end
-
-    class MinifyHtmlRack
-      
-      # Init
-      # @param [Class] app
-      # @param [Hash] options
-      def initialize(app, options={})
-        @app = app
-        @compressor = options[:compressor]
-      end
-
-      # Rack interface
-      # @param [Rack::Environmemt] env
-      # @return [Array]
-      def call(env)
-        status, headers, response = @app.call(env)
-
-        path = env["PATH_INFO"]
-
-        if path.end_with?('.html')
-          uncompressed_source = ::Middleman::Util.extract_response_text(response)
-          minified_html = @compressor.compress(uncompressed_source)
-
-          headers["Content-Length"] = ::Rack::Utils.bytesize(minified_html).to_s
-          response = [minified_html]
-        end
-
-        [status, headers, response]
-      end
-    end    
   end
 end
