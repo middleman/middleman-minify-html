@@ -28,8 +28,7 @@ https://github.com/middleman/middleman-minify-html/issues
 The best way to get quick responses to your issues and swift fixes to your bugs is to submit detailed bug reports, include test cases and respond to developer questions in a timely manner. Even better, if you know Ruby, you can submit Pull Requests containing Cucumber Features which describe how your feature should work or exploit the bug you are submitting.
 
 # Build & Dependency Status
-
-[![Build Status](http://travis-ci.org/middleman/middleman-minify-html.png)](http://travis-ci.org/middleman/middleman-minify-html)
+[![Build Status](https://travis-ci.org/middleman/middleman-minify-html.png?branch=master)](https://travis-ci.org/middleman/middleman-minify-html)
 
 # How to Run Cucumber Tests
 
