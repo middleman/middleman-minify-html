@@ -43,6 +43,6 @@ The best way to get quick responses to your issues and swift fixes to your bugs 
 
 # License
 
-Copyright (c) 2012 Thomas Reynolds. MIT Licensed, see [LICENSE] for details.
+Copyright (c) 2012-2013 Thomas Reynolds. MIT Licensed, see [LICENSE] for details.
 
 [LICENSE]: https://github.com/middleman/middleman-blog/blob/master/LICENSE
