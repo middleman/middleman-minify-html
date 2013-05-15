@@ -1,4 +1,4 @@
-source :rubygems
+source "https://rubygems.org"
 
 git "git://github.com/middleman/middleman.git", :branch => "3.0-stable" do
   # gem "middleman"
