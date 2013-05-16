@@ -23,7 +23,7 @@ activate :minify_html
 
 ## Community
 
-The official community forum is available at: http://forum.middlemanapp.com/
+The official community forum is available at: http://forum.middlemanapp.com
 
 ## Bug Reports
 
