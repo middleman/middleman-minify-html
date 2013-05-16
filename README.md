@@ -1,48 +1,53 @@
-# middleman-minify-html
+# Middleman-Minify-HTML
 
-# Install
+Minify (by removing whitespace) in HTML files
+
+## Installation
 
 ```
-gem install middleman-minify-html
+gem "middleman-minify-html"
 ```
 
-If you already have a Middleman project:
-Add `middleman-minify-html` to your `Gemfile`, and open your `config.rb` and add:
+## Config.rb
 
 ```
 activate :minify_html
 ```
 
-# Community
+## Build & Dependency Status
 
-The official community forum is available at:
+[![Gem Version](https://badge.fury.io/rb/middleman-minify-html.png)][gem]
+[![Build Status](https://travis-ci.org/middleman/middleman-minify-html.png?branch=master)][travis]
+[![Dependency Status](https://gemnasium.com/middleman/middleman-minify-html.png?travis)][gemnasium]
+[![Code Quality](https://codeclimate.com/github/middleman/middleman-minify-html.png)][codeclimate]
 
-  http://forum.middlemanapp.com/
+## Community
 
-# Bug Reports
+The official community forum is available at: http://forum.middlemanapp.com/
 
-GitHub Issues are used for managing bug reports and feature requests. If you run into issues, please search the issues and submit new problems:
+## Bug Reports
 
-https://github.com/middleman/middleman-minify-html/issues
+Github Issues are used for managing bug reports and feature requests. If you run into issues, please search the issues and submit new problems: https://github.com/middleman/middleman-minify-html/issues
 
-The best way to get quick responses to your issues and swift fixes to your bugs is to submit detailed bug reports, include test cases and respond to developer questions in a timely manner. Even better, if you know Ruby, you can submit Pull Requests containing Cucumber Features which describe how your feature should work or exploit the bug you are submitting.
+The best way to get quick responses to your issues and swift fixes to your bugs is to submit detailed bug reports, include test cases and respond to developer questions in a timely manner. Even better, if you know Ruby, you can submit [Pull Requests](https://help.github.com/articles/using-pull-requests) containing Cucumber Features which describe how your feature should work or exploit the bug you are submitting.
 
-# Build & Dependency Status
-[![Build Status](https://travis-ci.org/middleman/middleman-minify-html.png?branch=master)](https://travis-ci.org/middleman/middleman-minify-html)
-
-# How to Run Cucumber Tests
+## How to Run Cucumber Tests
 
 1. Checkout Repository: `git clone https://github.com/middleman/middleman-minify-html.git`
 2. Install Bundler: `gem install bundler`
 3. Run `bundle install` inside the project root to install the gem dependencies.
 4. Run test cases: `bundle exec rake test`
 
-# Donate
+## Donate
 
-[![Click here to lend your support to Middleman](http://www.pledgie.com/campaigns/15807.png)](http://www.pledgie.com/campaigns/15807)
+[Click here to lend your support to Middleman](https://spacebox.io/s/4dXbHBorC3)
 
-# License
+## License
 
 Copyright (c) 2012-2013 Thomas Reynolds. MIT Licensed, see [LICENSE] for details.
 
-[LICENSE]: https://github.com/middleman/middleman-blog/blob/master/LICENSE
+[gem]: https://rubygems.org/gems/middleman-minify-html
+[travis]: http://travis-ci.org/middleman/middleman-minify-html
+[gemnasium]: https://gemnasium.com/middleman/middleman-minify-html
+[codeclimate]: https://codeclimate.com/github/middleman/middleman-minify-html
+[LICENSE]: https://github.com/middleman/middleman-minify-html/blob/master/LICENSE.md
