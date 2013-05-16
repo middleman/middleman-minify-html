@@ -11,9 +11,11 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/middleman/middleman-minify-html"
   s.summary     = %q{A html whitespace minifier for Middleman}
   s.description = %q{A html whitespace minifier for Middleman}
+  s.license     = "MIT"
   s.rubyforge_project = "middleman-minify-html"
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ["lib"]
   s.add_runtime_dependency("middleman-core", "~> 3.0")
   s.add_runtime_dependency("htmlcompressor", "~> 0.0.4")
+end
