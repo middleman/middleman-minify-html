@@ -1,6 +1,6 @@
 # Middleman-Minify-HTML
 
-Minify (by removing whitespace) in HTML files
+A HTML whitespace minifier for Middleman
 
 ## Installation
 

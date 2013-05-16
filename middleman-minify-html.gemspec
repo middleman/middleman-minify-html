@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Thomas Reynolds"]
   s.email       = ["me@tdreyno.com"]
   s.homepage    = "https://github.com/middleman/middleman-minify-html"
-  s.summary     = %q{A html whitespace minifier for Middleman}
-  s.description = %q{A html whitespace minifier for Middleman}
+  s.summary     = %q{A HTML whitespace minifier for Middleman}
+  s.description = %q{A HTML whitespace minifier for Middleman}
   s.license     = "MIT"
   s.rubyforge_project = "middleman-minify-html"
   s.files         = `git ls-files`.split("\n")
