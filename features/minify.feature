@@ -29,4 +29,4 @@ Feature: Minify HTML
       """
     And a successfully built app at "basic-app"
     When I cd to "build"
-    Then the file "index.html" should contain "<h1> Multi Line </h1><h2> Broken Up </h2>"
+    Then the file "index.html" should contain " <h1> Multi Line </h1> <h2> Broken Up </h2> "
