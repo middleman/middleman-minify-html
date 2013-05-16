@@ -6,7 +6,7 @@ git "git://github.com/middleman/middleman.git", :branch => "3.0-stable" do
   # gem "middleman-more"
 end
 
-# Specify your gem's dependencies in middleman-blog.gemspec
+# Specify your gem's dependencies in middleman-minify-html.gemspec
 gemspec
 
 group :development do
