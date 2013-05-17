@@ -1,6 +1,6 @@
 # Middleman-Minify-HTML
 
-middleman-minify-html is an extension for the [Middleman] static site generator that minifies whitespace via [Htmlcompressor](https://github.com/paolochiodi/htmlcompressor).
+middleman-minify-html is an extension for the [Middleman] static site generator that minifies whitespace around HTML via [Htmlcompressor](https://github.com/paolochiodi/htmlcompressor).
 
 ## Installation
 
