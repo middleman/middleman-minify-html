@@ -26,7 +26,7 @@ activate :minify_html
 ## Build & Dependency Status
 
 [![Gem Version](https://badge.fury.io/rb/middleman-minify-html.png)][gem]
-[![Build Status](https://travis-ci.org/middleman/middleman-minify-html.png?branch=master)][travis]
+[![Build Status](https://travis-ci.org/middleman/middleman-minify-html.png)][travis]
 [![Dependency Status](https://gemnasium.com/middleman/middleman-minify-html.png?travis)][gemnasium]
 [![Code Quality](https://codeclimate.com/github/middleman/middleman-minify-html.png)][codeclimate]
 
