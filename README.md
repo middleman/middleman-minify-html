@@ -11,9 +11,7 @@ gem install middleman
 middleman init MY_PROJECT
 ```
 
-If you already have a Middleman project:
-
-Add `gem "middleman-minify-html"` to your `Gemfile` and run `bundle install`
+If you already have a Middleman project: Add `gem "middleman-minify-html"` to your `Gemfile` and run `bundle install`
 
 ## Config
 
