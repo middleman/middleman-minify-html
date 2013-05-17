@@ -1,4 +1,4 @@
-## Contributing
+# Contributing
 In the spirit of [free software][free-sw], **everyone** is encouraged to help
 improve this project.
 
