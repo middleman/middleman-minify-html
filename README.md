@@ -1,6 +1,6 @@
 # Middleman-Minify-HTML
 
-middleman-minify-html is an extension for the [Middleman] static site generator that minifies whitespace around HTML via [Htmlcompressor](https://github.com/paolochiodi/htmlcompressor).
+`middleman-minify-html` is an extension for the [Middleman] static site generator that minifies whitespace around HTML via [Htmlcompressor](https://github.com/paolochiodi/htmlcompressor).
 
 ## Installation
 
@@ -13,9 +13,7 @@ middleman init MY_PROJECT
 
 If you already have a Middleman project: Add `gem "middleman-minify-html"` to your `Gemfile` and run `bundle install`
 
-## Config
-
-Open your `config.rb` and add:
+## Configuration
 
 ```
 activate :minify_html
