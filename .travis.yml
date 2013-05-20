@@ -5,13 +5,13 @@ rvm:
   - jruby-18mode
   - jruby-19mode
 
-script: "bundle exec rake test"
-
-env: TEST=true TRAVIS=true
-
 gemfile:
   - Gemfile
-  - Gemfile-3.1
+  - Gemfile-3.0
+
+script: "bundle exec rake test"
+
+env: TEST=true
 
 matrix:
   allow_failures:

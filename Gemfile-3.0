@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "middleman", :github => "middleman/middleman"
+gem "middleman", "~> 3.0.0"
 
 # Specify your gem's dependencies in middleman-minify-html.gemspec
 gemspec

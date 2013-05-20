@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
-gem "middleman-core", "~> 3.0.13"
-gem "middleman-more", "~> 3.0.13"
+git "git://github.com/middleman/middleman.git", :branch => "master" do
+  gem "middleman-core"
+end
 
 # Specify your gem's dependencies in middleman-minify-html.gemspec
 gemspec
