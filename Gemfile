@@ -16,3 +16,8 @@ gem "builder",  "~> 3.0.0"
 
 # Code Quality
 gem "cane", :platforms => [:mri_19, :mri_20], :require => false
+
+# Cross-templating language block fix for Ruby 1.8
+platforms :mri_18 do
+  gem "ruby18_source_location"
+end
