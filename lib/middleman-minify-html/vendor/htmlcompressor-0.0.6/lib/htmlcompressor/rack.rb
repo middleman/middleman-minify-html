@@ -35,7 +35,7 @@ module HtmlCompressor
     def call env
       status, headers, body = @app.call(env)
 
-      if headers.key? 'Content-Type' and headers['Content-Type'] =~ /html/
+      if (File.extname(env["PATH_INFO"]) != '.php') && headers.key?('Content-Type') && (headers['Content-Type'] =~ /html/)
         content = ''
 
         body.each do |part|
