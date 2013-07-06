@@ -6,8 +6,7 @@ module Middleman
 
         app.after_configuration do
           unless respond_to?(:html_compressor) && html_compressor
-            require 'htmlcompressor'
-            set :html_compressor, ::HtmlCompressor::Compressor.new(options)
+            set :html_compressor, HtmlCompressor::Compressor.new(options)
           end
 
           # Setup Rack to watch for inline JS
