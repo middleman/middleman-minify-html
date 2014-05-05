@@ -13,7 +13,3 @@ gem "fivemat"
 gem "aruba",    "~> 0.5.1"
 gem "rspec",    "~> 2.12"
 gem "builder",  "~> 3.0.0"
-
-gem "pry"
-gem "pry-debugger"
-gem "pry-stack_explorer"
