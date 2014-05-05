@@ -10,8 +10,7 @@ Feature: Minify HTML
     Then I should see "13" lines
     
   Scenario: Preview HTML with minify_html enabled
-    Given "minify_html" feature is "enabled"
-    And the Server is running at "basic-app"
+    Given the Server is running at "basic-app"
     When I go to "/index.html"
     Then I should see "1" lines
     When I go to "/foobar.php"
