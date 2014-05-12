@@ -22,6 +22,16 @@ Feature: Minify HTML
     echo "bar";
     ?>
     """
+
+  Scenario: Preview HTML with minify_html enabled and custom option
+    Given a fixture app "basic-app"
+    And a file named "config.rb" with:
+      """
+      activate :minify_html, :preserve_line_breaks => true
+      """
+    And the Server is running at "basic-app"
+    When I go to "/index.html"
+    Then I should see "13" lines
   
   Scenario: Build HTML with minify_html disabled
     Given a fixture app "basic-app"
