@@ -29,6 +29,8 @@ activate :minify_html do |html|
   html.remove_comments            = true   # Remove comments
   html.remove_intertag_spaces     = false  # Remove inter-tag spaces
   html.remove_quotes              = true   # Remove quotes
+  html.compress_css               = false  # Compress CSS
+  html.compress_javascript        = false  # Compress JS
   html.simple_doctype             = false  # Use simple doctype
   html.remove_script_attributes   = true   # Remove script attributes
   html.remove_style_attributes    = true   # Remove style attributes
