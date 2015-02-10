@@ -33,8 +33,8 @@ module Middleman
     end
 
     def after_configuration
-      options[:javascript_compressor] = options[:javascript_compressor].call if options[:javascript_compressor].is_a?(Proc)
-      options[:css_compressor] = options[:css_compressor].call if options[:css_compressor].is_a?(Proc)
+      options[:javascript_compressor] = options[:javascript_compressor].call if options[:compress_javascript] && options[:javascript_compressor].is_a?(Proc)
+      options[:css_compressor] = options[:css_compressor].call if options[:compress_css] && options[:css_compressor].is_a?(Proc)
       app.use ::HtmlCompressor::Rack, options.to_h
     end
   end
