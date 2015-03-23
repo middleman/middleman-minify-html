@@ -15,6 +15,7 @@ module Middleman
     option :remove_https_protocol, false, 'Remove HTTPS protocol'
     option :preserve_line_breaks, false, 'Preserve line breaks'
     option :simple_boolean_attributes, true, 'Use simple boolean attributes'
+    option :preserve_patterns, nil, 'Patterns to preserve'
 
     def initialize(*)
       super
