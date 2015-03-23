@@ -40,6 +40,7 @@ activate :minify_html do |html|
   html.remove_https_protocol      = false  # Remove HTTPS protocol
   html.preserve_line_breaks       = false  # Preserve line breaks
   html.simple_boolean_attributes  = true   # Use simple boolean attributes
+  html.preserve_patterns          = nil    # Patterns to preserve
 end
 ```
 
