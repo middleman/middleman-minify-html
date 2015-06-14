@@ -36,7 +36,7 @@ activate :minify_html do |html|
   html.remove_form_attributes     = false  # Remove form attributes
   html.remove_input_attributes    = true   # Remove input attributes
   html.remove_javascript_protocol = true   # Remove JS protocol
-  html.remove_http_protocol       = true   # Remove HTTP protocol
+  html.remove_http_protocol       = false  # Remove HTTP protocol
   html.remove_https_protocol      = false  # Remove HTTPS protocol
   html.preserve_line_breaks       = false  # Preserve line breaks
   html.simple_boolean_attributes  = true   # Use simple boolean attributes

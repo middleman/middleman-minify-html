@@ -11,7 +11,7 @@ module Middleman
     option :remove_form_attributes, false, 'Remove form attributes'
     option :remove_input_attributes, true, 'Remove input attributes'
     option :remove_javascript_protocol, true, 'Remove JS protocol'
-    option :remove_http_protocol, true, 'Remove HTTP protocol'
+    option :remove_http_protocol, false, 'Remove HTTP protocol'
     option :remove_https_protocol, false, 'Remove HTTPS protocol'
     option :preserve_line_breaks, false, 'Preserve line breaks'
     option :simple_boolean_attributes, true, 'Use simple boolean attributes'
