@@ -4,6 +4,12 @@ module Middleman
     option :remove_comments, true, 'Remove comments'
     option :remove_intertag_spaces, false, 'Remove inter-tag spaces'
     option :remove_quotes, true, 'Remove quotes'
+
+    option :compress_css, false, 'Compress CSS'
+    option :compress_javascript, false, 'Compress JS'
+    option :css_compressor, nil, 'CSS compressor'
+    option :javascript_compressor, nil, 'JavaScript compressor'
+
     option :simple_doctype, false, 'Use simple doctype'
     option :remove_script_attributes, true, 'Remove script attributes'
     option :remove_style_attributes, true, 'Remove style attributes'
