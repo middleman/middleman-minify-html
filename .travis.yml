@@ -1,6 +1,9 @@
 dist: xenial
 language: ruby
 
+cache:
+  bundler: true
+
 rvm:
   - ruby-head
   - jruby-head
@@ -11,6 +14,7 @@ rvm:
 os:
   - linux
   - osx
+
 jobs:
   fast_finish: true
   allow_failures:
