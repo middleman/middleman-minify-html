@@ -20,27 +20,29 @@ activate :minify_html
 ```
 The various options can be passed with a block or as a hash like so:
 ```ruby
-activate :minify_html, remove_input_attributes: false
+activate :minify_html, compress_options: { remove_input_attributes: false }
 ```
 These are the default settings, as listed in the [Htmlcompressor documentation](https://github.com/paolochiodi/htmlcompressor#usage):
 ```ruby
 activate :minify_html do |html|
-  html.remove_multi_spaces        = true   # Remove multiple spaces
-  html.remove_comments            = true   # Remove comments
-  html.remove_intertag_spaces     = false  # Remove inter-tag spaces
-  html.remove_quotes              = true   # Remove quotes
-  html.simple_doctype             = false  # Use simple doctype
-  html.remove_script_attributes   = true   # Remove script attributes
-  html.remove_style_attributes    = true   # Remove style attributes
-  html.remove_link_attributes     = true   # Remove link attributes
-  html.remove_form_attributes     = false  # Remove form attributes
-  html.remove_input_attributes    = true   # Remove input attributes
-  html.remove_javascript_protocol = true   # Remove JS protocol
-  html.remove_http_protocol       = false  # Remove HTTP protocol
-  html.remove_https_protocol      = false  # Remove HTTPS protocol
-  html.preserve_line_breaks       = false  # Preserve line breaks
-  html.simple_boolean_attributes  = true   # Use simple boolean attributes
-  html.preserve_patterns          = nil    # Patterns to preserve
+  html.compress_options = {
+    remove_multi_spaces: true, # Remove multiple spaces
+    remove_comments: true, # Remove comments
+    remove_intertag_spaces: false, # Remove inter-tag spaces
+    remove_quotes: true, # Remove quotes
+    simple_doctype: false, # Use simple doctype
+    remove_script_attributes: true, # Remove script attributes
+    remove_style_attributes: true, # Remove style attributes
+    remove_link_attributes: true, # Remove link attributes
+    remove_form_attributes: false, # Remove form attributes
+    remove_input_attributes: true, # Remove input attributes
+    remove_javascript_protocol: true, # Remove JS protocol
+    remove_http_protocol: false, # Remove HTTP protocol
+    remove_https_protocol: false, # Remove HTTPS protocol
+    preserve_line_breaks: false, # Preserve line breaks
+    simple_boolean_attributes: true, # Use simple boolean attributes
+    preserve_patterns: nil # Patterns to preserve
+  }
 end
 ```
 

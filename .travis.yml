@@ -2,9 +2,10 @@ rvm:
   - ruby-head
   - jruby-head
   - jruby-19mode
-  - 2.2
-  - 2.1
-  - 2.0
+  - 2.7
+  - 2.6
+  - 2.5
+  - 2.4
 os:
   - linux
   - osx
@@ -14,7 +15,5 @@ matrix:
     - rvm: ruby-head
     - rvm: jruby-19mode
     - rvm: jruby-head
-
-script: "bundle exec rake test"
 
 env: TEST=true
