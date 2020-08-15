@@ -27,7 +27,7 @@ Feature: Minify HTML
     Given a fixture app "basic-app"
     And a file named "config.rb" with:
       """
-      activate :minify_html, compress_options: { preserve_line_breaks: true }
+      activate :minify_html, preserve_line_breaks: true
       """
     And the Server is running at "basic-app"
     When I go to "/index.html"
