@@ -25,6 +25,8 @@ activate :minify_html, remove_input_attributes: false
 These are the default settings, as listed in the [Htmlcompressor documentation](https://github.com/paolochiodi/htmlcompressor#usage):
 ```ruby
 activate :minify_html do |html|
+  html.ignore                     = []     # Patterns to avoid minifying
+  html.content_types              = [text/html] # Content types of resources that contain HTML
   html.remove_multi_spaces        = true   # Remove multiple spaces
   html.remove_comments            = true   # Remove comments
   html.remove_intertag_spaces     = false  # Remove inter-tag spaces

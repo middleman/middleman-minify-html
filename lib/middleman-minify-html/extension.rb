@@ -1,5 +1,10 @@
+require 'htmlcompressor'
+
 module Middleman
-  class MinifyHtmlExtension < Extension
+  class MinifyHtmlExtension < ::Middleman::Extension
+    option :ignore, [], 'Patterns to avoid minifying'
+    option :content_types, %w[text/html], 'Content types of resources that contain HTML'
+    # compressor options
     option :remove_multi_spaces, true, 'Remove multiple spaces'
     option :remove_comments, true, 'Remove comments'
     option :remove_intertag_spaces, false, 'Remove inter-tag spaces'
@@ -17,13 +22,39 @@ module Middleman
     option :simple_boolean_attributes, true, 'Use simple boolean attributes'
     option :preserve_patterns, nil, 'Patterns to preserve'
 
-    def initialize(*)
+    def initialize(app, _options_hash = ::Middleman::EMPTY_HASH, &block)
       super
-      require 'htmlcompressor'
+
+      @ignore = Array(options[:ignore])
+      compressor_options = options.to_h.reject do |k, _|
+        [:ignore, :content_types].include?(k)
+      end
+      @compressor = HtmlCompressor::Compressor.new(compressor_options)
     end
 
-    def after_configuration
-      app.use ::HtmlCompressor::Rack, options.to_h
+    def manipulate_resource_list_container!(resource_list)
+      resource_list.by_binary(false).each do |r|
+        type = r.content_type.try(:slice, /^[^;]*/)
+        if minifiable?(type) && !ignore?(r.destination_path)
+          r.add_filter method(:minify)
+        end
+      end
     end
+
+    def minifiable?(content_type)
+      options[:content_types].include?(content_type)
+    end
+    memoize :minifiable?
+
+    def ignore?(path)
+      @ignore.any? { |ignore| ::Middleman::Util.path_match(ignore, path) }
+    end
+    memoize :ignore?
+
+    def minify(content)
+      @compressor.compress(content)
+    end
+    memoize :minify
+
   end
 end
